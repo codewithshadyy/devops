@@ -2,7 +2,7 @@
 
 class Devops{
 
-    constructor(){
+    constructor(concepts){
         this.concepts  = []
     }
 
@@ -17,10 +17,17 @@ class Devops{
 
 
     }
+
+
+    list(){
+        return this.concepts.forEach(concept => concept)
+    }
 }
 
 
 const docker = new Devops.append("docker")
 const kubernetes = new Devops.append("kubernetes")
+const lists = new Devops.list()
 const devops = new Devops()
 console.log(devops.learn())
+console.log(lists)
