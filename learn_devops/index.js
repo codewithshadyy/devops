@@ -1,4 +1,11 @@
 
 
-console.log("I am learnng devops")
-console.log("I am learning docker")
+class Devops{
+
+    learn(){
+        console.log("I am learning devops")
+    }
+}
+
+const devops = new Devops()
+console.log(devops.learn())
