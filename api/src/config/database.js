@@ -3,12 +3,14 @@
 
 const mongoose = require("mongoose")
 
+require("dotenv").config()
+
 const MONGO_URL = process.env.MONGO_URL
 
 
-async function connectDB(){
+exports.connectDB = async () => {
 
-    try {
+     try {
 
         await mongoose.connect(MONGO_URL)
         
@@ -19,8 +21,5 @@ async function connectDB(){
         process.exit(1)
         
     }
+    
 }
-
-
-
-module.exports =  connectDB
